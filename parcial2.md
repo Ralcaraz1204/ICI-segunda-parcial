@@ -227,8 +227,64 @@ Ejemplo del array
 |7|
 |8|
 
-**Ciclo en for**
+**_Ciclo for:_**
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  for (var i = 0; i <= 9; i++) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+    }
+  }
+  stdout.write("aqui esta la lista, $arra");
+}
 ```
+**_Ciclo while:_**
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  while (i <= 9) {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int ner = int.parse(s);
+      arra[i] = ner;
+    }
+    i++;
+  }
+  stdout.write("Tu lista es, $arra ");
+}
+```
+**_Ciclo do-while:_**
+```dart
+void main() {
+  var arra = new List.filled(10, 0);
+  stdout.write("Dame diez numeros\n ");
+  stdout.write("----------\n");
+  int i = 0;
+  do {
+    String? s = stdin.readLineSync();
+    if (s != null) {
+      int n = int.parse(s);
+      arra[i] = n;
+      i++;
+    }
+  } while (i <= 9);
+  stdout.write("Tu lista es $arra ");
+}
+```
+
+#### 1.4 Entradas
+10 números leídos del teclado.
+#### Salidas
+A[10], lleno con elementos
+
 
 
 **EJERCICIO 5**
