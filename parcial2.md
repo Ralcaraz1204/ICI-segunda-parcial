@@ -885,7 +885,9 @@ CATURE 10 NUMEROS ENTEROS POSITIVOS, DIGA CUAL ES MAYOR Y CUAL ES MENOR.
 CAPTURAR 10 NUMEROS ENTEROS POSITIVOS, DESPUES CALCULAR CUAL NUMERO ES MAYOR Y CUAL ES MENOR.
             
             
-            DFD.
+            DFD
+            
+            
 [![44.jpg](https://i.postimg.cc/htK5gzBt/44.jpg)](https://postimg.cc/ykrPyNxM)
 #### 1.3 Prueba de escritorio 
 |A[11] |i=1 |i<=10|N |A[i]|N>0|NUM[i]=N|i++|NUM|MAYOR|i |i<=10|MAYOR>NUM[i]|MAYOR=NUM[i]|i++|MAYOR|MENOR=MAYOR|i |i<=10|MENOR<NUM[i]|MENOR=NUM[i]|i++|MENOR|
@@ -934,7 +936,9 @@ OBTEN LA DISTANCIA MAYOR ENTRE 2 NUMEROS CONCECUTIVOS EN UNA LISTA DE 10 NUMEROS
 #### 1.1 Analisis.
 Insertar 10 numeros, posteriormente calcular la distancia de 2 en 2 numeros y decir cual es la mayor distancia.
                
-               #### 1.2 DFD
+              1.2 DFD
+               
+               
 ![12](https://user-images.githubusercontent.com/113395327/197684202-afbcfb05-e77c-4657-97aa-c9c7c5377989.png)
 #### 1.3 Prueba de escritorio 
 |DIS[9],NUM[10]|i=1 |i<=9 |N |N>0|NUM[i]=N|i++|i  |i<9|DIS=NUM[i]-NUM[i+1]|DIS<0|D[i]=DIS|D[i]=DIS*-1|i++|
@@ -1008,7 +1012,9 @@ void main() {
    Almacene en un vector el resultado de una tabla (10 numeros)
 #### 1.1 Analisis. 
 Al tamaño del array sera de 10, validaremos el numero de la tabla, en una condición de termino.
-#### 1.2 DFD
+1.2 DFD
+  
+  
 ![13](https://user-images.githubusercontent.com/113395327/197684095-af2797a3-870a-44fe-a951-5756dbb6a704.png)
 #### 1.3 Prueba de escritorio 
 |n|n>0|i|i<=9|A[i]= n * i|i+1|
@@ -1054,7 +1060,9 @@ Desarrollar el siguiente diagrama de flujo.
 
 SE UTILIZA UN SIMBOLO DE CICLO DE FOR DONDE i=1; i<=5; i++, DESPUES SE UTILIZA OTRO CICLO DE FOR DONDE j=1; j<=i;j++, después se utiliza un símbolo de salida para imprimir 1 y se regresa al segundo ciclo y del segundo ciclo al primero.
 
-#### 1.2 DFD
+1.2 DFD
+                                                                                                                     
+                                                                                                                     
 ![14](https://user-images.githubusercontent.com/113395327/197684075-b7439c57-f658-44ec-b8d3-cb3a0f734614.png)
 #### 1.3 Prueba de escritorio 
 |i  |i<=5|j  |j<=i|1     |i++ |j++ |
