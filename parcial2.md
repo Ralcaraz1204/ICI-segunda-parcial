@@ -733,9 +733,38 @@ Escribe un dfd que obtenga la frecuencia de N calificaciones entre 1 y 10 indiqu
 [![9dowuile.jpg](https://i.postimg.cc/hvDXvdJ4/9dowuile.jpg)](https://postimg.cc/N9nsPL7Z)
 
 **Prueba de Escritorio**
+  
+  |CAL[1,10]|N  |N>0 |i  |i<=N|CAL[1,10]|C  |C>0, C<=10|CAL[C]++|i++|CAL|
+|---------|---|----|---|----|---------|---|----------|--------|---|---|
+|9        |4  |4>0 |0  |0<=4| 0        |9  |9>0, 9<=0 |10      |1  |9  |
+|9        |   |    |1  |1<=4|1         |9  |9>0, 9<=0 |10      |2  |9  |
+|8        |4  |4>0 |0  |2<=4| 2        |8  |8>0, 8<=0 |9       |3  |8  |
+|7        |   |    |1  |3<=4|  3       |7  |7>0, 7<=0 |8       |4  |7  |
+
+
+
+
+|CR |CA |PR |PA |PG |SR |SA |N  |i  |i<=n|NUM|NUM>0,NUM<=10|NUM>=6|CA+1|SA+NUM|CR+1|SR+NUM|i++|PA=SA/CA|PR=SR/CR|PG=(PR+PA)/2|PG |
+|---|---|---|---|---|---|---|---|---|----|---|-------------|------|----|------|----|------|---|--------|--------|------------|---|
+|0  |0  |0  |0  |0  |0  |0  |4  |0  |0< 4|8  |8>=0,8<=10   |8>=6  |1   |8     |0   |0     |1  |
+|0  |1  |0  |0  |0  |0  |8  |4  |1  |1< 4|5  |5>=0,5<=10   |5>=6  |1   |8     |1   |5     |2  |
+|1  |1  |0  |0  |0  |5  |8  |4  |2  |2< 4|9  |9>=0,9<=10   |9>=6  |2   |17    |1   |5     |3  |
+|1  |2  |0  |0  |0  |5  |7  |4  |3  |3< 4|3  |3>=0,3<=10   |3>=6  |2   |17    |2   |8     |4  |17/2    |8/4     |(8.5+4)/2   |6.25|
+
+
+#### 1.4 Entradas.
+N
+
+C
+
+NUM
+
+#### 1.5 Salidas.
 
 
 **Ciclo for**
+  
+  
 ```dart
 void main() {
   double CR = 0;
@@ -816,6 +845,32 @@ void main() {
 }
 ```
 **Ciclo Do-While**
-```
+```python
+  Calificaciones=int(input("Ingrese la cantidad de calificaciones"))
+vec=[]
+n=0
+cont = 0
+while(True):
+    calificacion=int(input("Calificacion: "))
+    n=n+calificacion
+    vec.append(calificacion)
+    cont += 1
+    if(cont>=Calificaciones):
+        break;
+        
+aprobado=0
+promedioAprobados = 0
+for h in vec:
+    if h>=5:
+        aprobado=aprobado+1
+        promedioAprobados = promedioAprobados + h
+promedioAprobados = promedioAprobados / aprobado
+reprobado=0
+for k in vec:
+    if k<=5:
+        reprobado=reprobado+1
+print("Cantidad de aprobados:", aprobado)
+print("Cantidad de reprobados:", reprobado)
+print("Promedio de aprobados:", promedioAprobados)
 
 ```
