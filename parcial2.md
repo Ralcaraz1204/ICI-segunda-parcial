@@ -23,7 +23,7 @@ DFD Que cuente del 1 al 10 y sume los valores
 
 **Ciclo for**
 
-```
+```dart
 void main(List<String> args) {
   int s = 0;
   for (var i = 1; i <= 10; i++) {
@@ -33,7 +33,7 @@ void main(List<String> args) {
 }
 ```
 **_Ciclo while:_**
-```
+```dart
 void main(List<String> args) {
   int s = 0, c = 1;
 
@@ -44,7 +44,7 @@ void main(List<String> args) {
   print("El resultado de la suma de los valores es:$s");
 ```
 **_Ciclo do-while:_**
-```
+```dart
 void main(List<String> args) {
   int s = 0, c = 1;
 
@@ -83,7 +83,7 @@ Realiza un DFD que obtenga la suma de los primeros 5 numeros pares
 
 **Ciclo for**
 
-```
+```dart
 void main(List<String> args) {
   int s = 0;
   for (var i = 2; i <= 10; i = i + 2) {
@@ -94,7 +94,7 @@ void main(List<String> args) {
 ```
 **Ciclo while**
 
-```
+```dart
 void main(List<String> args) {
   int s = 0, c = 1;
 
@@ -107,7 +107,7 @@ void main(List<String> args) {
 ```
 **Ciclo Do-while**
 
-```
+```dart
 void main(List<String> args) {
   int s = 0, c = 1;
   while (c <= 5) {
@@ -149,7 +149,7 @@ Ejemplo del array
 **Salidas=1**
 
 **Ciclo for**
-```
+```dart
 void main() {
   var arra = new List.filled(10, 0);
   stdout.write("Dame diez numeros\n ");
@@ -165,7 +165,7 @@ void main() {
 }
 ```
 **Ciclo While**
-```
+```dart
 void main() {
   var arra = new List.filled(10, 0);
   stdout.write("Dame diez numeros\n ");
@@ -183,7 +183,7 @@ void main() {
 }
 ```
 **Ciclo Do-While**
-```
+```dart
 void main() {
   var arra = new List.filled(10, 0);
   stdout.write("Dame diez numeros\n ");
@@ -316,7 +316,7 @@ Escribe un dfd que almacene un contador negativo del 10 al 0 en un vector
 |6|
 
 **Ciclo For**
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int c = 10;
@@ -328,7 +328,7 @@ void main() {
 ```
 **Ciclo while**
 
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int c = 10;
@@ -341,7 +341,7 @@ void main() {
 ```
 
 **Ciclo Do-While**
-```
+```dart
 void main() {
   var arr = <int>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int c = 10;
@@ -380,7 +380,7 @@ Realiza un dfd que almacene en un vector todos los numeros pares leidos hasta co
 |4|
 
 **Ciclo for**
-```
+```python
 listanumeros = []
 numerousuario = int(input("introdusca un numero: "))
 listanumeros.append(numerousuario)
@@ -415,7 +415,7 @@ for n in listanumeros:
 ```
 **Ciclo while**
 
-```
+```python
 listanumeros = []
 numerousuario = int(input("introdusca un numero: "))
 listanumeros.append(numerousuario)
@@ -438,7 +438,7 @@ input("por favor, precione una tecla para salir.")
 ```
 **Ciclo Do-While**
 
-```
+```dart
 print("PARES")
 numero_1 = int(input("Escriba un número entero: "))
 numero_2 = int(input(f"Escriba un número entero mayor o igual que {numero_1}: "))
@@ -506,6 +506,79 @@ print("El total de aprobados fueron >> ",j)
 print("El total de reprobados fueron >> ",(len(alumnos)-j))
 ```
 
+**_Ciclo while:_**
+```python
+alumnos = list(range(15))
+p_aprobados = 0
+j = 0
+
+for i in alumnos: 
+    while(True):
+        calificacion = int(input("Ingresa la calificación >>"))
+        if (calificacion >= 0 and calificacion <= 10):
+            break
+        else:
+            print("Calificación fuera de rango. Intenta de nuevo")
+ 
+    if (calificacion < 6):
+     alumnos[i] = "R"
+    else:
+     p_aprobados = calificacion + p_aprobados
+     j = j + 1
+     alumnos[i] = "A"
+
+print("\033[33;1m",alumnos,"\033[39m")
+print("El promedio de calificación de los aprobados es de >>",round(p_aprobados/j,2))
+print("El total de aprobados fueron >> ",j)
+print("El total de reprobados fueron >> ",(len(alumnos)-j))
+```
+**_Ciclo do-while:_**
+```dart
+void main() {
+  double PromA = 0;
+  var contr = 0;
+  double sumaA = 0;
+  double contA = 0;
+  double cal1 = 0;
+  double cal2 = 1;
+  var cont = 0;
+  stdout.write("Dame las calificaciones\n ");
+  stdout.write("----------\n");
+  do {
+    double c = double.parse(stdin.readLineSync()!);
+    cont = cont +1;
+    if (c > 10) {
+      print('La calificacion no puede ser mayor a 10');
+      cont = cont - 1;
+    }
+    if (c < 0) {
+      print('La calificacion no puede ser menor a 0');
+      cont = cont - 1;
+    }
+    if (c < 6 && c > 0) {
+      contr = contr + 1;
+    }
+    if (c <= 10 && c >= 6) {
+      cal1 = c;
+      sumaA = sumaA + cal1;
+      contA++;
+    }
+    if (cal1 > cal2) {
+      cal2 = cal1;
+    }
+  } while (cont <= 14);
+  PromA = sumaA / contA;
+  print('El promedio de aprobados es $PromA');
+  print('La calificacion mas alta es $cal2');
+  print('La cantidad de reprobados son $contr');
+}
+```
+
+#### 1.4 Entradas
+Calificacines
+#### Salidas
+Calificaciones, promedio de las calificaciones aprobatorias y cantidad de alumnos reprobados.
+
 
 **EJERCICIO 8**
 
@@ -536,7 +609,7 @@ Crea un dfd que capture N numeros en el rango [li,ls] donde LI=limite inferior y
   
   **Ciclo for**
   
-  ```
+  ```python
   sp=0
 cp=0
 pp=0
@@ -599,7 +672,7 @@ else:
   ```
   **Ciclo while**
   
-  ```
+  ```python
   print("Dame Límite inferior: ")
 Li = int(input())
 while Li<0:
@@ -616,7 +689,7 @@ while Ls<=Li:
   ```
   **Ciclo Do-while**
   
-  ```
+  ```dart
   pares = 0
 impares = 0
 
@@ -663,7 +736,7 @@ Escribe un dfd que obtenga la frecuencia de N calificaciones entre 1 y 10 indiqu
 
 
 **Ciclo for**
-```
+```dart
 void main() {
   double CR = 0;
   double CA = 0;
@@ -708,7 +781,7 @@ void main() {
 }
 ```
 **Ciclo while**
-```
+```dart
 void main() {
   double CR = 0;
   double CA = 0;
